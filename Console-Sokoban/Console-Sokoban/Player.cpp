@@ -47,6 +47,13 @@ void Player::Move (COORD direction)
 	COORD nextPosition = { m_Position.X + direction.X, m_Position.Y + direction.Y };
 
 	m_Position = { nextPosition.X, nextPosition.Y };
+
+	Draw ();
+}
+
+void Player::Draw ()
+{
+	m_Console.Draw (m_Position, m_Symbol, m_Color);
 }
 
 Player::~Player ()

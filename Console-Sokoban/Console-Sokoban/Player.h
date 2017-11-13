@@ -19,6 +19,7 @@ public:
 	Player (Console& console, COORD position);
 	Player (Console& console, COORD position, WORD color);
 	void Move (COORD direction);
+	void Draw ();
 	~Player ();
 
 };
